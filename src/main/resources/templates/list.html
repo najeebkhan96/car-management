@@ -1,0 +1,39 @@
+<html layout:decorator="layout">
+
+<div layout:fragment="content">
+
+    <a class="btn btn-primary" href="/posts/new">Add new Car</a>
+
+    <table class="table table-striped" id="cars_list">
+        <thead>
+        <tr>
+            <th>Names</th>
+            <th>Action</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr data-th-each="car : ${cars}">
+            <td class="name" data-th-text="${car.name}"></td>
+
+            <td>
+                <a th:href="@{'/cars/{id}/delete'(id=${car.id})}" class="delete" th:attr="name=${car.name}">
+                        <span class="fa-stack">
+                            <i class="glyphicon glyphicon-trash"></i>
+                        </span>
+                </a>
+            </td>
+
+            <td>
+                <a th:href="@{'/cars/{id}/edit'(id=${car.id})}" class="edit" th:attr="name=${car.name}">
+                    <span class="fa-stack">
+                        <i class="glyphicon glyphicon-edit"></i>
+                    </span>
+
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</html>

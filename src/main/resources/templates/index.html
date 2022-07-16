@@ -1,0 +1,25 @@
+<div th:switch="${cars}">
+    <h2 th:case="null">No cars yet!</h2>
+        <div th:case="*">
+            <h2>Cars</h2>
+            <table id="car_table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr th:each="car : ${cars}">
+                    <td th:text="${car.name}"></td>
+                    <td th:text="${car.price}"></td>
+                    <td><a th:href="@{/edit/{id}(id=${car.id})}">Edit</a></td>
+                    <td><a th:href="@{/delete/{id}(id=${car.id})}">Delete</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>      
+    <p><a href="/signup">Add a new Car</a></p>
+</div>
