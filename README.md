@@ -1,0 +1,1 @@
+[![Coverage Status](https://coveralls.io/repos/github/najeebkhan96/car-management/badge.svg?branch=main)](https://coveralls.io/github/najeebkhan96/car-management?branch=main)
