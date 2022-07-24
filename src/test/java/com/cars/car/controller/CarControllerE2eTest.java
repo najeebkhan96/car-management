@@ -69,7 +69,7 @@ public class CarControllerE2eTest {
 	void testEditCar() {
 		System.setProperty("webdriver.chrome.driver", "chromedriver/chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.get("http://localhost:8080/edit/2133");
+		driver.get("http://localhost:8080/edit/205");
 		
 		/*
 		 * driver.findElement (By.cssSelector("a[href*='/edit/2133']")) .click();
